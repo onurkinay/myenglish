@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivityFragment"
+    tools:showIn="@layout/activity_add">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="10dp"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:layout_height="fill_parent">
+
+            <EditText
+                android:id="@+id/textWord"
+                android:layout_height="wrap_content"
+                android:hint="Word..."
+                android:spinnerMode="dropdown"
+                android:drawSelectorOnTop="true"
+                android:inputType="textAutoComplete"
+                android:layout_width="fill_parent">
+            </EditText>
+
+            <EditText
+                android:id="@+id/textTranslate"
+                android:layout_height="wrap_content"
+                android:hint="In Turkish"
+                android:inputType="textAutoComplete"
+                android:layout_width="fill_parent">
+            </EditText>
+            <EditText
+                android:id="@+id/textSample"
+                android:layout_height="wrap_content"
+                android:hint="Sample sentence..."
+                android:inputType="textAutoComplete"
+                android:layout_width="fill_parent">
+            </EditText>
+            <EditText
+                android:id="@+id/textMeans"
+                android:layout_height="wrap_content"
+                android:hint="Means...."
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:gravity="top|left"
+                android:layout_width="fill_parent">
+            </EditText>
+
+            <Spinner
+                android:id="@+id/spWordType"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:entries="@array/wordtypes" android:prompt="@string/verb">
+            </Spinner>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
