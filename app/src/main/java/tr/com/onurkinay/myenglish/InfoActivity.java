@@ -16,11 +16,11 @@ public class InfoActivity extends AppCompatActivity {
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
                 .setImage(R.drawable.fsmvu)
-                .addItem(new Element().setTitle("Version Alpha 0.1"))
+                .addItem(new Element().setTitle("Version Alpha 0.2"))
                 .addGroup("Connect with us")
                 .addEmail("ben@onurkinay.com.tr")
                 .addWebsite("http://onurkinay.com.tr")
-                .addItem(getBitbucket())
+                .addGitHub("onurkinay")
                 .addItem(getLinkedIn())
                 .setDescription("This application is my first application. The application can save your words you want to learn and you can practice words you had saved every day")
                 .create();

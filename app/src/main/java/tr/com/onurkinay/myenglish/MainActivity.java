@@ -268,16 +268,15 @@ public class MainActivity extends AppCompatActivity  implements
             builder.setPositiveButton("SD Card", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+
+
                     Date date = new Date();
                     SimpleDateFormat ft =
                             new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
 
                     String backup = wordC.BackupJSON(getBaseContext());
-                    String state = Environment.getExternalStorageState();
                     //external storage availability check
-                    if (!Environment.MEDIA_MOUNTED.equals(state)) {
-                        return;
-                    }
+
                     File dir = new File(Environment.getExternalStoragePublicDirectory(
                             Environment.DIRECTORY_DOCUMENTS), "MyEnglishBackup");
                     if (!dir.mkdirs()) {
